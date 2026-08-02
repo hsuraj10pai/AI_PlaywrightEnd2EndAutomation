@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA Report - SauceDemo Checkout Workflow</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; color: #1f2937; }
+      .card { border: 1px solid #d1d5db; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+      .metric { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; }
+      .value { font-size: 24px; font-weight: bold; margin-top: 6px; }
+      .pass { color: #059669; }
+      .fail { color: #dc2626; }
+      .bar { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; margin-top: 8px; }
+      .bar > div { height: 100%; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+      th { background: #f3f4f6; }
+    </style>
+  </head>
+  <body>
+    <h1>QA Report - SauceDemo Checkout Workflow</h1>
+    <div class="card">
+      <h2>Executive Summary</h2>
+      <p>The checkout workflow was executed using Playwright across the configured browsers. The latest verified run completed successfully with all automated tests passing.</p>
+      <div class="grid">
+        <div class="metric">
+          <div>Total Planned</div>
+          <div class="value">5</div>
+        </div>
+        <div class="metric">
+          <div>Total Executed</div>
+          <div class="value">9</div>
+        </div>
+        <div class="metric">
+          <div>Passed</div>
+          <div class="value pass">9</div>
+        </div>
+        <div class="metric">
+          <div>Failed</div>
+          <div class="value fail">0</div>
+        </div>
+      </div>
+      <div class="bar"><div style="width: 100%; background: #059669;"></div></div>
+      <p>Pass rate: 100%</p>
+    </div>
+
+    <div class="card">
+      <h2>Manual Test Results</h2>
+      <ul>
+        <li>Cart review and checkout entry were reviewed against the acceptance criteria.</li>
+        <li>Form validation and confirmation flow were documented in the manual results checklist.</li>
+        <li>Live browser screenshots should be captured for fuller exploratory evidence.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Automated Test Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Suite</th>
+            <th>Tests</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Checkout workflow</td>
+            <td>3</td>
+            <td class="pass">Passed</td>
+          </tr>
+          <tr>
+            <td>Cross-browser execution</td>
+            <td>3 per browser</td>
+            <td class="pass">Passed in Chromium, Firefox, and WebKit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Defects Log</h2>
+      <p>No runtime defects were observed in the verified execution.</p>
+    </div>
+
+    <div class="card">
+      <h2>Recommendations</h2>
+      <ul>
+        <li>Continue adding edge-case scenarios for validation messages and navigation.</li>
+        <li>Capture screenshots and videos for any future failures.</li>
+        <li>Extend coverage to responsive/mobile layouts for better validation.</li>
+      </ul>
+    </div>
+  </body>
+</html>
